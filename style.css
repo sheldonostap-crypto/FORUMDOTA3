@@ -1,0 +1,184 @@
+/* --- Змінні та Основа --- */
+:root {
+    --neon: #00f2ff;
+    --pink: #ff00ea;
+    --gold: #f3ad23;
+    --bg: #0a0b10;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --input-bg: rgba(0, 0, 0, 0.6);
+    --transition: 0.3s ease;
+}
+
+body {
+    background: var(--bg);
+    color: #fff;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* --- Допоміжні класи --- */
+.hidden {
+    display: none !important;
+}
+
+.screen {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20px 40px;
+    box-sizing: border-box;
+}
+
+/* --- Шапка (Header) --- */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(15px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    border-bottom: 1px solid var(--neon);
+    z-index: 1000;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.1);
+}
+
+/* --- Кнопки --- */
+.btn {
+    background: transparent;
+    border: 1px solid var(--neon);
+    color: var(--neon);
+    padding: 10px 22px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: var(--transition);
+    border-radius: 4px;
+    letter-spacing: 1px;
+    outline: none;
+}
+
+.btn:hover {
+    background: var(--neon);
+    color: #000;
+    box-shadow: 0 0 20px var(--neon);
+}
+
+.btn-pink {
+    border-color: var(--pink);
+    color: var(--pink);
+}
+
+.btn-pink:hover {
+    background: var(--pink);
+    color: #fff;
+    box-shadow: 0 0 20px var(--pink);
+}
+
+/* --- Авторизація (Login Box) --- */
+.login-box {
+    background: rgba(15, 15, 25, 0.8);
+    padding: 50px 40px;
+    border: 1px solid var(--neon);
+    border-radius: 20px;
+    text-align: center;
+    width: 360px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 40px rgba(0, 242, 255, 0.1);
+}
+
+/* --- Картки клубів --- */
+.club-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    margin: 15px;
+    width: 280px;
+    text-align: center;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.club-card:hover {
+    border-color: var(--neon);
+    transform: translateY(-8px);
+    background: rgba(0, 242, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Пости та Коментарі --- */
+.post {
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 4px solid var(--pink);
+    padding: 25px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 650px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.comment-section {
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+}
+
+.comment {
+    font-size: 0.9em;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 10px 15px;
+    margin-top: 8px;
+    border-radius: 6px;
+    border-left: 2px solid var(--gold);
+}
+
+.comment-input-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* --- Поля вводу --- */
+input, textarea {
+    background: var(--input-bg);
+    border: 1px solid #333;
+    color: #fff;
+    padding: 14px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color var(--transition);
+}
+
+input:focus, textarea:focus {
+    border-color: var(--neon);
+    outline: none;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Плавна поява сторінок */
+.screen:not(.hidden) {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
