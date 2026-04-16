@@ -4,9 +4,9 @@ header('Content-Type: text/html; charset=utf-8');
 
 // --- НАЛАШТУВАННЯ БАЗИ ---
 $host = 'localhost';
-$db_name = 'mysite14hjsc_dbUKRAINIANDOTA2';
-$db_user = 'mysite14hjsc_dbUKRAINIANDOTA2';
-$db_pass = 'jU0eeO7xrN1b';
+$db_name = 'mysite14hjsc_DBDOTA2UKRFORUM';
+$db_user = 'mysite14hjsc_DBDOTA2UKRFORUM';
+$db_pass = 'qwe123asdfqwe8457y36#&$@#';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db_name;charset=utf8mb4", $db_user, $db_pass, [
