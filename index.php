@@ -84,30 +84,7 @@ if (isset($_GET['logout'])) { session_destroy(); header("Location: index.php"); 
 <head>
     <meta charset="UTF-8">
     <title>УКРАЇНСЬКА ДОТА 2 ФОРУМ</title>
-    <style>
-        :root { --neon: #00f2ff; --pink: #ff00ea; --gold: #f3ad23; --bg: #0a0b10; }
-        body { background: var(--bg); color: #fff; font-family: 'Segoe UI', sans-serif; margin: 0; overflow-x: hidden; }
-        .screen { min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 100px 20px 40px; box-sizing: border-box; }
-        .hidden { display: none !important; }
-        .header { position: fixed; top: 0; width: 100%; height: 70px; background: rgba(0,0,0,0.85); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: space-between; padding: 0 30px; border-bottom: 1px solid var(--neon); z-index: 1000; box-sizing: border-box; }
-        .btn { background: transparent; border: 1px solid var(--neon); color: var(--neon); padding: 10px 20px; cursor: pointer; font-weight: bold; text-transform: uppercase; transition: 0.3s; border-radius: 4px; }
-        .btn:hover { background: var(--neon); color: #000; box-shadow: 0 0 15px var(--neon); }
-        .btn-pink { border-color: var(--pink); color: var(--pink); }
-        .btn-pink:hover { background: var(--pink); color: #fff; box-shadow: 0 0 15px var(--pink); }
-        .club-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 30px; margin: 15px; width: 280px; text-align: center; border-radius: 12px; cursor: pointer; transition: 0.3s; }
-        .club-card:hover { border-color: var(--neon); transform: translateY(-5px); background: rgba(0,242,255,0.05); }
-        
-        /* Стилі постів та коментарів */
-        .post { background: rgba(255,255,255,0.03); border-left: 4px solid var(--pink); padding: 20px; margin-bottom: 25px; width: 100%; max-width: 650px; border-radius: 4px; box-sizing: border-box; }
-        .comment-section { margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px; }
-        .comment { font-size: 0.9em; background: rgba(255,255,255,0.02); padding: 8px 12px; margin-top: 5px; border-radius: 4px; border-left: 2px solid var(--gold); }
-        .comment-input-group { display: flex; gap: 5px; margin-top: 10px; }
-        .comment-input-group input { margin: 0; padding: 5px 10px; font-size: 0.85em; }
-
-        input, textarea { background: rgba(0,0,0,0.5); border: 1px solid #333; color: #fff; padding: 12px; margin: 10px 0; width: 100%; border-radius: 6px; box-sizing: border-box; }
-        input:focus { border-color: var(--neon); outline: none; }
-        .login-box { background: rgba(255,255,255,0.02); padding: 40px; border: 1px solid var(--neon); border-radius: 20px; text-align: center; width: 340px; backdrop-filter: blur(5px); }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
